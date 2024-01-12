@@ -1,0 +1,114 @@
+@media only screen and (max-width:1024px) {
+    .mountain-img {
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width:704px) {
+    .right-nav {
+        padding-left: 0px;
+        justify-content: space-evenly;
+    }
+
+    .right-nav div {
+        width: 30%;
+    }
+
+    .title-text {
+        font-size: 6em;
+    }
+
+    .schedule-section {
+
+        padding-left: 0%;
+        justify-content: center;
+    }
+
+    .card {
+        width: 40vw;
+    }
+
+    .left-nav,
+    .right-nav {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width:540px) {
+
+    .left-nav {
+        width: 40%;
+    }
+
+    .right-nav {
+        width: 60%;
+    }
+
+    .para {
+        font-size: small;
+    }
+
+    .time {
+        justify-content: space-between;
+    }
+
+    .mountain2 {
+        height: 86%;
+    }
+
+    .title-text {
+        font-size: 4.4em;
+        padding-top: 68px;
+        top: 98px;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    .swiper {
+        width: 80%;
+        height: 60%;
+        margin-top: 19px;
+    }
+
+    .carousel {
+        height: 23%;
+    }
+
+    .history-page {
+        height: 87vh;
+    }
+
+    .para {
+        font-size: x-small;
+    }
+
+
+    .mountain2 {
+        height: 86%;
+    }
+
+    .card {
+        width: 53vw;
+    }
+
+    .title-text {
+        /* font-size: 4.4em;
+      padding-top: 68px; */
+        top: 79px;
+    }
+
+    .title-text {
+        top: -7px;
+    }
+
+    .team-page {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width:415px) {
+    .title-text {
+        top: 13px;
+    }
+}

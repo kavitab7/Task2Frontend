@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resopnsive.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="home-page">
+        <nav>
+            <div class="left-nav">
+                <div class="logo"></div>
+            </div>
+            <div class="right-nav">
+                <div><a href="#history">01. History</a></div>
+                <div><a href="#team">02. Team</a></div>
+            </div>
+        </nav>
+        <div class="part2">
+            <div class="title-text">LOSANGELES</div>
+        </div>
+        <div class="mountain-img"></div>
+        <div class="mountain-img mountain2"></div>
+
+    </section>
+    <div class="bottom-part">
+        <div class="left-nav">
+            <div class="logo"></div>
+            <div class="nav-text">LOSANGELES<span>MOUNTAINS</span></div>
+        </div>
+        <div class="right-nav">
+            <div><a href="#history">01. History</a></div>
+            <div><a href="#team">02. Team</a></div>
+        </div>
+    </div>
+    <section id="history" class="history-page">
+        <div class="text-part">
+            <div class="title">
+                <div class="number">01</div>
+                <div class="name">HISTORY<span></span></div>
+            </div>
+            <p class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorum excepturi veritatis quae illum
+                perferendis laborum numquam? Quibusdam veritatis voluptatibus consequuntur? Ea ad possimus sequi!
+                Possimus
+                necessitatibus dolor alias fugit.
+            </p>
+        </div>
+        <div class="carousel">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./Images/photo1.png" /></div>
+                    <div class="swiper-slide"><img src="./Images/photo2.png" /></div>
+                    <div class="swiper-slide"><img src="./Images/photo1.png" /></div>
+                    <div class="swiper-slide"><img src="./Images/photo2.png" /></div>
+                    <div class="swiper-slide"><img src="./Images/photo1.png" /></div>
+                    <div class="swiper-slide"><img src="./Images/photo2.png" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>
+    <section id="team" class="team-page">
+        <div class="text-part">
+            <div class="title">
+                <div class="number">02</div>
+                <div class="name">CLIMB<span></span></div>
+            </div>
+            <p class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorum excepturi veritatis quae illum
+                perferendis laborum numquam? Quibusdam veritatis voluptatibus
+            </p>
+        </div>
+        <div class="title-bar">
+            <div class="mount1 active-schedule" id="mount1" onclick="disp1function()">Mountain1</div>
+            <div class="mount2" id="mount2" onclick="disp2function()">Mountain2</div>
+        </div>
+        <div class="schedule-section">
+            <div class="card" id="card1">
+                <h2>SCHEDULE 1</h2>
+                <div class="time">
+                    <p>09 Nov 2006</p>
+                    <p>Loremipsum </p>
+                </div>
+                <div class="time">
+                    <p>19 Jan 2016</p>
+                    <p>Loremipsum </p>
+                </div>
+                <div class="time">
+                    <p>10 May 2026</p>
+                    <p>Loremipsum </p>
+                </div>
+                <div class="time">
+                    <p>04 Nov 2003</p>
+                    <p>Loremipsum </p>
+                </div>
+            </div>
+            <div class="card schedule2" id="card2">
+                <h2>SCHEDULE 2</h2>
+                <div class="time">
+                    <p>09 Nov 2006</p>
+                    <p>Loremipsum </p>
+                </div>
+                <div class="time">
+                    <p>19 Jan 2016</p>
+                    <p>Loremipsum </p>
+                </div>
+                <div class="time">
+                    <p>10 May 2026</p>
+                    <p>Loremipsum </p>
+                </div>
+                <div class="time">
+                    <p>04 Nov 2003</p>
+                    <p>Loremipsum </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="bottom-part">
+                <div class="left-nav">
+                    <div class="logo"></div>
+                    <div class="nav-text">LOSANGELES<span>MOUNTAINS</span></div>
+                </div>
+                <div class="right-nav">
+                    <div>Copyright 2024. All rights reserved</div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 8,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        var schedule1 = document.getElementById('card1');
+        var schedule2 = document.getElementById('card2');
+        var mount1 = document.getElementById('mount1');
+        var mount2 = document.getElementById('mount2');
+        function disp1function() {
+            schedule2.classList.add("schedule2");
+            schedule1.classList.remove("schedule2")
+            schedule1.classList.add("schedule1");
+            schedule2.classList.remove("schedule1");
+            mount1.classList.add("active-schedule");
+            mount2.classList.remove("active-schedule");
+        }
+        function disp2function() {
+            schedule1.classList.add("schedule2");
+            schedule1.classList.remove("schedule1")
+            schedule2.classList.remove("schedule2");
+            schedule2.classList.add("schedule1");
+            mount2.classList.add("active-schedule");
+            mount1.classList.remove("active-schedule");
+        }
+    </script>
+</body>
+
+</html>
